@@ -24,6 +24,8 @@ body {
     font-family: 'Roboto',sans-serif;
     padding: 0;
     margin: 0;
+    overflow-x: hidden; /* remove horizontal scrollbar of the page */
+
 }
 .header {
     background-color: #4845E4;
@@ -136,8 +138,6 @@ h3 {
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 /* --------------- 3.1 Reusables ----------------------- */
-
-
 .articlecontainer {
     display: flex;
     flex-direction: column;
@@ -154,6 +154,20 @@ h3 {
     text-decoration: none;
     font-weight: bold;
     color: #5722CD;
+    text-transform: uppercase;
+}
+a::after {
+    display: block;
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: #5722CD;
+    transition: width .35s ease-in-out;
+}
+/* EINDSTAAT */
+a:hover::after {
+    /* alle andere properties worden behouden, we overschrijven alléén de width property */
+    width: 15%;
 }
 .boxcontainer {
     display: flex;
