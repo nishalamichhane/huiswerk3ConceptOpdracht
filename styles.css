@@ -29,6 +29,14 @@ body {
     background-color: #4845E4;
     height: 500px;
     position: relative;
+    background-image: linear-gradient(90deg, #4845E4 0%, #5722CD 35%, #5722CD 100%);
+    transform:rotate(2deg); /* for sloped edge header*/
+    top:-8%;
+    left:-5%;
+    width: 110%; /* voor white screen hidden */
+}
+.nav {
+    transform:rotate(-2deg);/* voor text straight,  have to keep  */
 }
 nav a {
     text-decoration: none;
@@ -38,16 +46,23 @@ ul li a:visited {
     color: white;
     list-style: none;
     text-decoration: none;
+    margin-right:5%; /* if i don't use then text will go on right side en text can't be seen*/
+    margin-top: 20px;
 }
 .nav-item {
     list-style: none;
-    margin-right: 2rem;
+   /* margin-right: 2rem;*/
     color: white;
+    margin-right:5%; /* if i don't use then text will go on right side en text can't be seen*/
+    margin-top: 20px;
+    padding: 10px;
 }
 .nav-list {
     display: flex;
     justify-content: flex-end;
     padding: 20px;
+    margin-right:5%; /* if i don't use then text will go on right side en text can't be seen*/
+    margin-top: 20px;
 }
 .button-work-together {
     background-color: #ED4385;
@@ -59,6 +74,7 @@ ul li a:visited {
     position: absolute;
     margin: 20px;
     border-style: none;
+    transform:rotate(-2deg); /* voor button straight, have to keep */
     /*filter:drop-shadow(2px 2px 2px);
     text-shadow:blue;*/
 }
@@ -66,6 +82,7 @@ ul li a:visited {
     position: absolute;
     bottom: 0;
     left: calc(50% - 50px);
+    transform:rotate(-2deg); /* voor button straight, have to keep */
 }
 .first-row {
     display: flex;
@@ -77,6 +94,8 @@ ul li a:visited {
     text-align: center;
     font-family: Merriweather;
     padding: 30px;
+    margin-left:5%; /* voor text straight, have to keep */
+    transform:rotate(-2deg);/* voor text straight,  have to keep  */
 }
 h3 {
     color: #5722CD;
@@ -88,6 +107,8 @@ h3 {
     text-align: center;
     padding-top: 10px;
     font-family: Merriweather;
+    margin-left:5%; /* voor text straight, have to keep */
+    transform:rotate(-2deg); /* voor text straight, have to keep */
 }
 /* ------------------------------- 2. Typography ----------------------------------- */
 .second-row {
@@ -196,9 +217,10 @@ h3 {
     flex-direction: column;
     align-items: center;
     padding: 50px;
+    background-image: linear-gradient(90deg, #4845E4 0%, #5722CD 35%, #5722CD 100%);
     /*height: 480;*/
 }
-.div-contact-form h5 { /* div in contact form */
+.div-contact-form h1, h5 { /* div in contact form */
     color: white;
     text-align: center;
     padding-top: 20px;
@@ -249,7 +271,6 @@ textarea {
     text-align: center;
     padding: 10px;
 }
-
 @media screen and (max-width: 600px) { /* voor  mobiele versie */
     .boxcontainer {
         display: flex;
