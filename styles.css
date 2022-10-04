@@ -1,0 +1,318 @@
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+    5. Media Queries
+////////////////////////*/
+/* ------------------------------- 1. Global Styles -------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Roboto:wght@300&display=swap');
+* {
+    margin:0;
+    padding: 0;
+}
+body {
+    /* max-width: 1200px;
+    margin: auto; for center */
+    font-family: 'Roboto',sans-serif;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden; /* remove horizontal scrollbar of the page */
+
+}
+.header {
+    background-color: #4845E4;
+    height: 500px;
+    position: relative;
+    background-image: linear-gradient(90deg, #4845E4 0%, #5722CD 35%, #5722CD 100%);
+    transform:rotate(2deg); /* for sloped edge header*/
+    top:-8%;
+    left:-5%;
+    width: 110%; /* voor white screen hidden */
+}
+.nav {
+    transform:rotate(-2deg);/* voor text straight,  have to keep  */
+}
+nav a {
+    text-decoration: none;
+    color:white;
+}
+ul li a:visited {
+    color: white;
+    list-style: none;
+    text-decoration: none;
+    margin-right:5%; /* if i don't use then text will go on right side en text can't be seen*/
+    margin-top: 20px;
+}
+.nav-item {
+    list-style: none;
+   /* margin-right: 2rem;*/
+    color: white;
+    margin-right:5%; /* if i don't use then text will go on right side en text can't be seen*/
+    margin-top: 20px;
+    padding: 10px;
+}
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    margin-right:5%; /* if i don't use then text will go on right side en text can't be seen*/
+    margin-top: 20px;
+}
+.button-work-together {
+    background-color: #ED4385;
+    color: white;
+    width: 200px;
+    height: 50px;
+    left: calc(50% - 100px);
+    border-radius: 30px; /* maak oval voor button */
+    position: absolute;
+    margin: 20px;
+    border-style: none;
+    transform:rotate(-2deg); /* voor button straight, have to keep */
+    /*filter:drop-shadow(2px 2px 2px);
+    text-shadow:blue;*/
+}
+.squiggle-stripe {
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 50px);
+    transform:rotate(-2deg); /* voor button straight, have to keep */
+}
+.first-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.first-row h1 {
+    color: white;
+    text-align: center;
+    font-family: Merriweather;
+    padding: 30px;
+    margin-left:5%; /* voor text straight, have to keep */
+    transform:rotate(-2deg);/* voor text straight,  have to keep  */
+}
+h3 {
+    color: #5722CD;
+    font-family: Merriweather;
+}
+/* first */
+.first-row h4 {
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    font-family: Merriweather;
+    margin-left:5%; /* voor text straight, have to keep */
+    transform:rotate(-2deg); /* voor text straight, have to keep */
+}
+/* ------------------------------- 2. Typography ----------------------------------- */
+.second-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.second-row h2 {
+    color: #5722CD;
+    text-align: center;
+    padding: 20px;
+    font-family: Merriweather;
+}
+.second-row p {
+    color: #0C0C0C;
+    text-align: center;
+    padding: 30px;
+}
+.second-row a {
+    color: #5722CD;
+    text-align: center;
+    text-decoration: none;
+}
+/* end of second */
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+/* --------------- 3.1 Reusables ----------------------- */
+.articlecontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin: 5px;
+    padding-left: 20px;
+    position: relative;
+    flex-basis: 800px; /* when we resize screen then it has to be defined. THis is for 800 width of screen*/
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+.articlecontainer a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #5722CD;
+    text-transform: uppercase;
+}
+a::after {
+    display: block;
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: #5722CD;
+    transition: width .35s ease-in-out;
+}
+/* EINDSTAAT */
+a:hover::after {
+    /* alle andere properties worden behouden, we overschrijven alléén de width property */
+    width: 15%;
+}
+.boxcontainer {
+    display: flex;
+    justify-content: center;
+    background-color: #F3F6F9 ;
+}
+.boxcontainer-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+   }
+.button-left {
+    position: absolute;
+}
+.work-image {
+    width: 100%;
+    flex-basis: 800px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+/* --------------- 3.2 Other --------------------------- */
+
+/* end of 3*/
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+/* --------------- 4.1 Header ------------------------- */
+/* --------------- 4.2 Introduction ------------------- */
+.services-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-style: solid;
+    border-color: #5722CD;
+    flex-basis: 280px; /*width */
+    margin: 5px;
+    padding: 30px;
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+.services-container img {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.services-container p {
+    padding-top: 20px;
+    color: #7A7A7A;
+}
+.section-container {
+    display: flex;
+    justify-content: center;
+   /* width: 100%;*/
+    margin:20px;
+    flex-wrap: wrap;
+   }
+/* end of 4*/
+/* ------------------------------- 5. Media Queries -------------------------------- */
+.div-contact-form { /* div in contact form */
+    background-color: #4845E4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    background-image: linear-gradient(90deg, #4845E4 0%, #5722CD 35%, #5722CD 100%);
+    /*height: 480;*/
+}
+.div-contact-form h1, h5 { /* div in contact form */
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    position: relative;
+}
+.div-contact-form p { /* div in contact form */
+    background-color: blue;
+}
+label {
+    display: block;
+    color: white;
+}/* text box gaat op volgende lijn*/
+.button-send {
+    background-color: #ED4385;
+    color: white;
+    width: 100px;
+    height: 40px;
+    left: calc(50% - 50px);
+    border-radius: 30px; /* maak oval voor button */
+    border-style: none;
+    position: absolute;
+    margin: 5px;
+
+}
+input[type="text"] {
+    width: 400px;
+    height: 40px;
+    color: #7A7A7A;
+    font-weight: bold;
+    padding-left: 15px;
+}
+input[type="email"] {
+    width: 400px;
+    height: 40px;
+    color: #7A7A7A;
+    font-weight: bold;
+    padding-left: 15px;
+}
+textarea {
+    color: #7A7A7A;
+    font-weight: bold;
+    padding-left: 15px;
+    padding-top: 15px;
+}
+.footer {
+    background-color: #0C0C0C ;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+@media screen and (max-width: 600px) { /* voor  mobiele versie */
+    .boxcontainer {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+}
+@media screen and (max-width: 600px) { /* voor  mobiele versie */
+    .boxcontainer-reverse {
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+}
+@media screen and (max-width: 600px) { /* voor  mobiele versie */
+    .work-image {
+        flex-basis: 300px;
+        flex-grow: 0;
+        flex-shrink: 1;
+        padding: 0;
+    }
+}
+@media screen and (max-width: 600px) { /* voor  mobiele versie */
+    .articlecontainer {
+        flex-basis: 300px;
+        flex-grow: 0;
+        flex-shrink: 1;
+        padding: 0;
+
+    }
+}
